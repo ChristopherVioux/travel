@@ -5,11 +5,10 @@ import "./login.scss";
 
 
 const Login = () => {
-
     const { login } = useContext(AuthContext);
 
     const handleLogin = () => {
-        login();
+      login();
     };
 
     return (
@@ -28,7 +27,7 @@ const Login = () => {
                     <form>
                         <input type="text" placeholder="Nom utilisateur"/>
                         <input type="password" placeholder="Mot de passe"/>
-                        <button onClick={ handleLogin }>Se connecter</button>
+                        <button onClick={handleLogin}>Se connecter</button>
                     </form>
                 </div>
             </div>
