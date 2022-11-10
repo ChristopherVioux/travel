@@ -8,10 +8,14 @@ import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsAc
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Marty from "../../assets/marty.png";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-
+import  { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 const Navbar = () => {
+
+    const { toggle, darkMode } = useContext(DarkModeContext);
+
     return (
         <div className="navbar">
             <div className="left">
@@ -19,7 +23,7 @@ const Navbar = () => {
                     <span>reaseausocial</span>
                 </Link>
                 <HouseOutlinedIcon/>
-                <NightlightOutlinedIcon/>
+                {darkMode ? <LightModeOutlinedIcon onClick={ toggle }/> : <NightlightOutlinedIcon onClick= { toggle }/>}
                 <WidgetsOutlinedIcon/>
                 <div className="search">
                     <SearchOutlinedIcon/>
