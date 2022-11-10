@@ -7,16 +7,21 @@ import Memories from "../../assets/memories.png";
 import Messages from "../../assets/messages.png";
 import Videos from "../../assets/videos.png";
 import Marty from "../../assets/marty.png";
+import { useContext } from "react";
+import { AuthContext } from "../../context/authContext";
 
 
 const LeftBar = () => {
+
+    const { currentUser} = useContext(AuthContext);
+
     return (
         <div className="leftBar">
             <div className="container">
                 <div className="menu">
                     <div className="user">
-                        <img src={Marty} alt="User" />
-                        <span>Marty Mcfly</span>
+                        <img src={currentUser.profilePic} alt="User" />
+                        <span>{currentUser.name}</span>
                     </div>
                     <div className="item">
                         <img src={Friends} alt="Friends icon" />
