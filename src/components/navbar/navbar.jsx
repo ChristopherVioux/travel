@@ -6,7 +6,6 @@ import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import Marty from "../../assets/marty.png";
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import  { useContext } from "react";
 import { Link } from "react-router-dom";
